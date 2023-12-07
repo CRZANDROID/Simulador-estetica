@@ -1,9 +1,8 @@
-
 package com.example.simuladorestetica.monitors;
 
 import com.example.simuladorestetica.threads.Estilista;
 import javafx.fxml.FXML;
-import javafx.scene.image.Image;
+
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
@@ -51,17 +50,9 @@ public class Estilistas {
                 flag = true;
             }
         }
-        System.out.println("Estilista no. " + (id + 1) + " atendiendo a " + Thread.currentThread().getName());
-        
-        Thread thread = new Thread(() -> {
-            
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-            estilistasDisponibles[id] = true;
-        });
+        System.out.println("Estilista no. " + id+1 + " atendiendo a " + Thread.currentThread().getName());
+        Estilista estilista = new Estilista(anchorPane, imageView, x, y, this, id);
+        Thread thread = new Thread(estilista);
         thread.start();
     }
 }

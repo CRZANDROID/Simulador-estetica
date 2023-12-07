@@ -1,12 +1,12 @@
-
-
 package com.example.simuladorestetica.threads;
 
+import com.example.simuladorestetica.monitors.Estetica;
 import com.example.simuladorestetica.monitors.Estilistas;
 import javafx.animation.TranslateTransition;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+
 
 public class Estilista implements Runnable {
     private AnchorPane anchorPane;
@@ -30,7 +30,7 @@ public class Estilista implements Runnable {
     public void run() {
         if (id == 2) {
             estilistas.estilistasDisponibles[0] = true;
-            estilistas.estilistasDisponibles[1] = false; 
+            estilistas.estilistasDisponibles[1] = true;
         }
 
         this.positionX = this.positionX - ((int) imageView.getLayoutX()) + 25;
@@ -55,4 +55,3 @@ public class Estilista implements Runnable {
         estilistas.estilistasDisponibles[2] = true;
     }
 }
-

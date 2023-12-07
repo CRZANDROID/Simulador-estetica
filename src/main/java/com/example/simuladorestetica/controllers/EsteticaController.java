@@ -1,21 +1,19 @@
-
-
 package com.example.simuladorestetica.controllers;
 
 import com.example.simuladorestetica.monitors.Estetica;
 import com.example.simuladorestetica.monitors.Estilistas;
 import com.example.simuladorestetica.threads.CrearClientes;
-import com.example.simuladorestetica.threads.Estilista;
-import javafx.animation.TranslateTransition;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.util.Duration;
+
 
 import java.util.Observable;
 import java.util.Observer;
+
 
 public class EsteticaController implements Observer {
     @FXML
@@ -52,12 +50,8 @@ public class EsteticaController implements Observer {
                 String[] cadena = ((String) arg).split(" ");
                 int x = Integer.parseInt(cadena[1]);
                 int y = Integer.parseInt(cadena[2]);
-                enviarEstilista(x, y);  
+                estilistas.enviarEstilista(x, y);
             }
         }
-    }
-
-    private void enviarEstilista(int x, int y) {
-        estilistas.enviarEstilista(x, y);
     }
 }
