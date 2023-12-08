@@ -32,6 +32,7 @@ public class EsteticaController implements Observer {
     @FXML
     void iniciar(ActionEvent event) {
         Estetica estetica = new Estetica();
+        
         botonInicio.setDisable(true);
         estetica.addObserver(this);
 
@@ -42,6 +43,7 @@ public class EsteticaController implements Observer {
 
         createClientesThread.setDaemon(true);
         createClientesThread.start();
+        
     }
 
     @Override

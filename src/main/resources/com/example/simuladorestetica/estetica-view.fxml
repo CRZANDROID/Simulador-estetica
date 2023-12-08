@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simuladorestetica.controllers.EsteticaController">
+<AnchorPane fx:id="anchorPane" style="-fx-background-color: #808080;" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.simuladorestetica.controllers.EsteticaController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="531.0" layoutX="149.0" layoutY="109.0" stroke="BLACK" strokeType="INSIDE" width="693.0" />
       <Button fx:id="botonInicio" layoutX="443.0" layoutY="653.0" mnemonicParsing="false" onAction="#iniciar" prefHeight="33.0" prefWidth="123.0" text="Iniciar" />
